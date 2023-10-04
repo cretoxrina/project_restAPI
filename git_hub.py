@@ -8,10 +8,10 @@ import json
 class Push: # Этот класс предназначен для отправки файла в репозиторий
     @staticmethod
     def push(file_path): 
-        GITHUB_TOKEN = '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' #Я создал этот токенвгите
+        GITHUB_TOKEN = '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' #Я создал этот токенвгите
         github = Github(GITHUB_TOKEN) 
         repo_owner = 'cretoxrina' # Это имя пользователя 
-        repo_name = 'restAPI' # Это имя репозиторий
+        repo_name = 'restAPI1' # Это имя репозиторий
         repo = github.get_user(repo_owner).get_repo(repo_name) # Передаем через методы 
         commit_message = f'Add {file_path}' # Это коммит выдает сообщение
         branch_name = 'main'   # В какой ветви будет находится файл
@@ -23,9 +23,9 @@ class Get_Api:
 
     @staticmethod
     def get_api(fname):
-        GITHUB_TOKEN = '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'
+        GITHUB_TOKEN = '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'
         repo_owner = 'cretoxrina'
-        repo_name = 'restAPI'
+        repo_name = 'restAPI1'
         file_path = fname
         branch_name = 'main'
         url = f'https://api.github.com/repos/{repo_owner}/{repo_name}/contents/{file_path}?ref={branch_name}' # Это апишка гитхаба, не использовал параметры, все данные в заключены до endpoit 
